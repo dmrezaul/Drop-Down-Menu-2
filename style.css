@@ -1,0 +1,116 @@
+/*DEFAULT CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.main-content-wrap {
+    width: 1000px;
+    margin: auto;
+}
+
+.header-section {
+    background: #34495e;
+}
+
+/*HEADER LEFT*/
+
+.header-left {
+    width: 35%;
+    float: left;
+}
+
+.header-left h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 58px;
+}
+
+.header-left a {
+    text-decoration: none;
+}
+
+/*HEADER RIGHT*/
+
+.header-right {
+    width: 65%;
+    float: right;
+}
+
+.nav-menu ul {
+    text-align: right;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.nav-menu ul li a {
+    display: block;
+    padding: 20px 20px;
+    font-size: 20px;
+    border-right: 1px solid #ddd;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-menu ul li:first-child a {
+    border-left: 1px solid #ddd;
+}
+
+.nav-menu ul li:hover>a {
+    background: black;
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 180px;
+    background: #34495e;
+    border-top: 1px solid #ddd;
+    transition: .4s
+}
+
+.nav-menu ul li ul li {
+    display: block;
+    margin-left: 0;
+}
+
+.nav-menu ul li ul li a {
+    display: block;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.nav-menu ul li ul li:first-child a {
+    border-left: none;
+}
+
+.nav-menu ul li ul {
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+
+.nav-menu ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
